@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<!-- 
+		Replace path to template, title, header and body
+		with actual data.
+	 -->
+<h:head>
+	<title>Principal</title>
+	<style type="text/css">
+.linverder400 {
+	height: 400px;
+	width: 50px;
+	border-right: 2px ridge black;
+}
+
+.barra_vertical {
+	float: left;
+	border-left: 1px solid black;
+	width: 150px;
+	height: 400px;
+}
+
+.alisup {
+	vertical-align: top;
+}
+
+.fondo{
+	background:#3b424c;
+	color:#f7f8f9;
+}
+.fondoMenu{
+	background:#f7f8f9;
+	color:#3b424c;
+}
+.fondoCuerpo{
+	background:#adafb2;
+	color:#1a1b1c;
+}
+
+
+</style>
+
+</h:head>
+<h:body>
+	<div id="Contenedor">
+		<div id="cabecera" class="fondo">
+			<ui:insert name="heater">
+				<ui:include src="/Cabecera.xhtml" />
+			</ui:insert>
+		</div>
+		<hr />
+
+
+		<table width="100%" style="height: 100px" align="left" cellpadding="0"
+			cellspacing="0" border="0">
+			<tbody>
+				<tr>
+					<td class="barra_vertical" >
+
+						<div id="menu" class="fondoMenu">
+							<ui:insert name="menus">
+								<ui:include src="/menu.xhtml" />
+							</ui:insert>
+						</div>
+
+					</td>
+
+					<td class="barra_vertical" >
+						<div id="cuerpo" class="fondoCuerpo">
+							<ui:insert name="body">
+								<ui:include src="/cuerpo.xhtml" />
+							</ui:insert>
+						</div>
+
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<hr />
+		<div id="pie" class="fondo">
+			<ui:insert name="footer">
+				<ui:include src="/Pie.xhtml" />
+			</ui:insert>
+		</div>
+	</div>
+</h:body>
+</html>

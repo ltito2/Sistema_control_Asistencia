@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head></h:head> 
+<h:body> 
+	<ui:composition>
+		<h:form>
+			<h:panelGrid columns="1" style="margin-bottom: 50px">
+				<h:commandLink action="h" value="Ingreso" >
+					<f:attribute name="tipo" value="nuevo"/>
+					<f:attribute name="titulo" value="Nuevo Usuario"/>
+				</h:commandLink>
+			</h:panelGrid>
+			<h:commandLink action="h" value="Registro" >
+					<f:attribute name="tipo" value="nuevo"/>
+					<f:attribute name="titulo" value="Ingreso de Usuario"/>
+			</h:commandLink>
+			<h:commandLink action="h" value="Registro de Asistencia" >
+					<f:attribute name="tipo" value="todos"/>
+					<f:attribute name="titulo" value="Estudiantes"/>
+			</h:commandLink>	
+		</h:form>
+	</ui:composition>
+</h:body> 
+</html>

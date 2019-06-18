@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head>
+	<title>Reporte</title>
+</h:head> 
+<h:body> 
+	<ui:composition template="/Principal.xhtml">
+		<ui:define name="body">
+			<h3 style="text-align: center">
+				<h:outputText value="Sistema de control de Asistencia" />
+			</h3>
+			<h:form style="text-align: center">
+				<h:commandLink action="Principal" value="Inicio" />
+			</h:form>
+		</ui:define>
+	</ui:composition>
+</h:body> 
+</html>
