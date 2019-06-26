@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:ui="http://java.sun.com/jsf/facelets" 
+      xmlns:h="http://java.sun.com/jsf/html" 
+      xmlns:f="http://java.sun.com/jsf/core">
+
+<head>
+	<center>
+		<h1 style="color: red">Listado de Docentes</h1>
+	</center>
+</head>
+<body>
+	<h:form>
+		<center>
+				
+			<h:dataTable value="#{docenteController.listadoDocente}" var="doc" border="1" id="do">
+				<h:column >
+					<f:facet name="header">
+						<h:outputText value="Id" />
+					</f:facet>
+					<h:outputText value="#{doc.id}" />
+				</h:column>
+				
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="Cedula" />
+					</f:facet>
+					<h:outputText value="#{doc.cedula}"/>
+				</h:column>
+				
+				<h:column>
+				<f:facet name="header">
+						<h:outputText value="Nombre" />
+					</f:facet>
+					<h:outputText value="#{doc.nombre}" />
+				</h:column>
+				
+				<h:column>
+				<f:facet name="header">
+						<h:outputText value="Apeellido" />
+					</f:facet>
+					<h:outputText value="#{doc.apellido}" />
+				</h:column>
+				
+				<h:column>
+				<f:facet name="header">
+						<h:outputText value="Direccion" />
+					</f:facet>
+					<h:outputText value="#{doc.direccion}" />
+				</h:column>
+				
+				<h:column>
+				<f:facet name="header">
+						<h:outputText value="Telefono" />
+					</f:facet>
+					<h:outputText value="#{doc.telefono}" />
+				</h:column>
+				
+				<h:column>
+			<f:facet name="header">Acciones</f:facet>
+			<h:commandButton action="#{docenteController.editar(doc.id)}" immediate="true" value="Editar" />
+			<h:commandButton action="#{docenteController.borrar(doc.id)}" immediate="true" value="Borrar" />
+		</h:column>
+			 
+		</h:dataTable>
+		<br />
+		<h:panelGrid columns="3">
+			
+				<h:outputLabel value="Buscar: " />
+				<h:inputText value="#{docenteController.docente.nombre}" />
+				<h:commandButton action="#{docenteController.busqueda()}" value="Buscar" />
+		</h:panelGrid>
+			 <br />	
+		<h:dataTable value="#{docenteController.listadoDocenteNom}" var="doc1" border="1">
+			<h:column >
+					<f:facet name="header">
+						<h:outputText value="Id" />
+					</f:facet>
+					<h:outputText value="#{doc1.id}" />
+				</h:column>
+				
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="Cedula" />
+					</f:facet>
+					<h:outputText value="#{doc1.cedula}"/>
+				</h:column>
+				
+				<h:column>
+				<f:facet name="header">
+						<h:outputText value="Nombre" />
+					</f:facet>
+					<h:outputText value="#{doc1.nombre}" />
+				</h:column>
+				
+				<h:column>
+				<f:facet name="header">
+						<h:outputText value="Apeellido" />
+					</f:facet>
+					<h:outputText value="#{doc1.apellido}" />
+				</h:column>
+				
+				<h:column>
+				<f:facet name="header">
+						<h:outputText value="Direccion" />
+					</f:facet>
+					<h:outputText value="#{doc1.direccion}" />
+				</h:column>
+				
+				<h:column>
+				<f:facet name="header">
+						<h:outputText value="Telefono" />
+					</f:facet>
+					<h:outputText value="#{doc1.telefono}" />
+				</h:column>
+		</h:dataTable>
+		<br />
+		<br />
+		<h:commandLink action="/Docente" immediate="true" value="Regresar a Ingresar" />
+	</center>
+	</h:form>
+</body>
+   
+</html>

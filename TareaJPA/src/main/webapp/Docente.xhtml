@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:ui="http://java.sun.com/jsf/facelets" 
+      xmlns:h="http://java.sun.com/jsf/html" 
+      xmlns:f="http://java.sun.com/jsf/core">
+<head>
+	<center>
+		<h1 style="color: red">Ingreso de docentes</h1>
+		<h1 style="color: black">Realizado por: Cristhian Cabrera</h1>
+	</center>
+</head>
+  
+<body>
+<h:form>
+	<center>
+		<h:panelGrid columns="3">
+		
+			<h:outputText value="Id:" />
+			<h:inputText value="#{docenteController.docente.id}"  id="txtCodigo"/>
+			<h:message for="txtCodigo"/>
+			
+			<h:outputText value="Cedula:" />
+			<h:inputText value="#{docenteController.docente.cedula}"  id="txtCedula"/>
+			<h:message for="txtCedula"/>
+			
+			<h:outputText value="Nombre:" />
+			<h:inputText value="#{docenteController.docente.nombre}"  id="txtNombre"/>
+			<h:message for="txtNombre"/>
+			
+			<h:outputText value="Apellido:" />
+			<h:inputText value="#{docenteController.docente.apellido}"  id="txtApellido"/>
+			<h:message for="txtApellido"/>
+			
+			<h:outputText value="Dirección:" />
+			<h:inputText value="#{docenteController.docente.direccion}"  id="txtDireccion"/>
+			<h:message for="txtDireccion"/>
+			
+			<h:outputText value="Telefono:" />
+			<h:inputText value="#{docenteController.docente.telefono}"  id="txtTelefono"/>
+			<h:message for="txtTelefono"/>
+			
+			<h:commandButton action="#{docenteController.cargarDatos()}" value="Guardar" />
+			<h:commandButton action="Listar" immediate="true" value="Listar" />
+		</h:panelGrid>
+	</center>
+</h:form>
+
+</body>   
+   
+</html>
