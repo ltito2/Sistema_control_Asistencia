@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
@@ -12,7 +13,7 @@ import javax.persistence.OneToMany;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-
+@Entity
 public class Estudiante {
 	
 	@Id
@@ -51,9 +52,9 @@ public class Estudiante {
 	@Size(min = 3, max = 75)
 	private String direccion;
 
-	/*@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	@JoinColumn(name="alum_codigo")
-	private List<Materia> materias;*/
+	private List<Materia> materias;
 	
 	public int getCodigo() {
 		return codigo;
@@ -111,7 +112,7 @@ public class Estudiante {
 		this.cedula = cedula;
 	}
 	
-	/*public List<Materia> getMaterias() {
+	public List<Materia> getMaterias() {
 		return materias;
 	}
 
@@ -125,6 +126,6 @@ public class Estudiante {
 			materias = new ArrayList<>();
 		}
 		this.materias.add(mat);
-	}*/
+	}
 
 }
