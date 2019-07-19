@@ -28,15 +28,15 @@ public class Materia {
 	
 	//Asociacion - bidireccionalidad
 	@OneToOne
-	@JoinColumn(name="alum_codigo")
+	@JoinColumn(name="est_codigo")
 	//@JsonIgnore
-	private Estudiante alumno;
+	private Estudiante estudiante;
 	
 	@Transient
 	private int idTipo;
 	
 	@Transient
-	private int idAlumnoTemp;
+	private int idEstudianteTemp;
 	
 	public int getCodigo() {
 		return codigo;
@@ -59,20 +59,22 @@ public class Materia {
 		this.tipo = tipo;
 	}
 	
-	public Estudiante getAlumno() {
-		return alumno;
+	public Estudiante getEstudiante() {
+		return estudiante;
 	}
 	
-	public void setAlumno(Estudiante alumno) {
-		this.alumno = alumno;
+	public void setEstudiante(Estudiante estudiante) {
+		this.estudiante = estudiante;
 	}
 	
-	public int getIdAlumnoTemp() {
-		return idAlumnoTemp;
+	public int getIdEstudianteTemp() {
+		return idEstudianteTemp;
 	}
-	public void setIdAlumnoTemp(int idAlumnoTemp) {
-		this.idAlumnoTemp = idAlumnoTemp;
+	
+	public void setIdEstudianteTemp(int idEstudianteTemp) {
+		this.idEstudianteTemp = idEstudianteTemp;
 	}
+	
 	/*Propiedad temporal*/
 	public int getIdTipo() {
 		return idTipo;

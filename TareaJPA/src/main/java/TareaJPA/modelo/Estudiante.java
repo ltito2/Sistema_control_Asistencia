@@ -17,43 +17,43 @@ import javax.validation.constraints.Size;
 public class Estudiante {
 	
 	@Id
-	@Column(name="alum_codigo")
+	@Column(name="est_codigo")
 	private int codigo;
 	
 	@NotNull
-	@Column(name="alum_nombre")
+	@Column(name="est_nombre")
 	@Size(min = 3, max = 25)
 	private String nombre;
 	
 	@NotNull
-	@Column(name="alum_apellido")
+	@Column(name="est_apellido")
 	@Size(min = 3, max = 25)
 	private String apellido;
 	
 	@NotNull
-	@Column(name="alum_cedula")
+	@Column(name="est_cedula")
 	//@Size(min = 3, max = 25)
 	private String cedula;
 	
 	/*@NotNull
     @Size(min = 9, max = 10)
     @Digits(fraction = 0, integer = 10)*/
-	@Column(name = "alum_telefonor")
+	@Column(name = "est_telefonor")
 	private String telefono;
     
 	/*@NotNull
 	@NotEmpty
 	@Email*/
-	@Column(name="alum_email")
+	@Column(name="est_email")
 	private String email;
 		
 	@NotNull
-	@Column(name="alum_direccion")
+	@Column(name="est_direccion")
 	@Size(min = 3, max = 75)
 	private String direccion;
 
 	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-	@JoinColumn(name="alum_codigo")
+	@JoinColumn(name="est_codigo")
 	private List<Materia> materias;
 	
 	public int getCodigo() {
