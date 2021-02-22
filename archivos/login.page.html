@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Log in</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row class="ion-justify-content-center">
+    <ion-col size="4">
+      <ion-img src="assets/logo.png"></ion-img>
+    </ion-col>
+  </ion-row>
+  <form>
+    <ion-item lines="full" class="item">
+      <ion-label position=floating color="light">Email</ion-label>
+      <ion-input type="text" required></ion-input>
+    </ion-item>
+    
+    <ion-item lines="full" class="item">
+      <ion-label position=floating color="light">Contraseña</ion-label>
+      <ion-input type="password" required></ion-input>
+    </ion-item>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="7">
+        <ion-button type="submit" color="success" expand="block">Sign In</ion-button>
+        <a [routerLink]="['/forgot-password']" class="small-text">!!Olvide mi contraseña</a>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>
